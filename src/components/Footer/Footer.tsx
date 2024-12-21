@@ -1,7 +1,14 @@
-import { Box, Flex, Text, Link, Spacer, useBreakpointValue } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Text,
+  Link,
+  Spacer,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
 export const Footer = () => {
-  const isMobile = useBreakpointValue({ base: true, md: false })
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <Flex
@@ -17,7 +24,9 @@ export const Footer = () => {
       color="white"
     >
       <Box>
-        <Text fontSize="sm">© 2024 DIO BANK. Todos os direitos reservados.</Text>
+        <Text fontSize="sm">
+          © 2024 DIO BANK. Todos os direitos reservados.
+        </Text>
       </Box>
 
       <Spacer />
@@ -34,5 +43,5 @@ export const Footer = () => {
         </Link>
       </Box>
     </Flex>
-  )
-}
+  );
+};
