@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { getAllLocalStorage, createLocalStorage } from "../services/storage";
+import { getAllLocalStorage } from "../services/storage";
 
 interface IAppContext {
   email: string;
@@ -20,12 +20,10 @@ export const AppContextProvider = ({ children }: any) => {
       const { login, email } = JSON.parse(storage);
       setIsLoggedIn(login);
       if (login) {
-        setEmail(email);  
+        setEmail(email);
       }
     }
-  }, []);
-
-
+  }, [storage]);
 
   return (
     <AppContext.Provider value={{ email, isLoggedIn, setIsLoggedIn }}>

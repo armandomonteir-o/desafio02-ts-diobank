@@ -1,5 +1,5 @@
 import { Center, SimpleGrid, Spinner, Button } from "@chakra-ui/react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { CardInfo } from "../components/CardInfo/CardInfo";
 import { useState, useEffect, useContext } from "react";
 import { api } from "../api";
@@ -18,7 +18,6 @@ export const Conta = () => {
 
   const { isLoggedIn } = useContext(AppContext);
 
-  const { id } = useParams();
   const navigate = useNavigate();
 
   !isLoggedIn && navigate("/");
